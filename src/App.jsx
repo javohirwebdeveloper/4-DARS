@@ -49,10 +49,10 @@ function App() {
                 className={`header duration-300 transition-all w-screen right-0 z-50 top-0 fixed ${
                   isScrolled
                     ? "bg-[#1E1E20] bg-opacity-80 !fixed border-[#2F2F30] backdrop-blur-[12px]"
-                    : " p-5"
+                    : "p-5"
                 }`}
               >
-                <div className="container py-[15px] flex items-center justify-between transition-all duration-300">
+                <div className={`${isScrolled ? 'max-w-[1160px]' : 'max-w-[1180px]'} mx-auto py-[15px] flex items-center justify-between transition-all duration-300`}>
                   <button className="text-white inline-flex lg:!hidden">
                     <i className="icon hover:text-red-500 py-1.5 px-1.5 bg-[#ffffff29] rounded-[10px]">
                       <svg
@@ -89,7 +89,7 @@ function App() {
                   <a
                     aria-current="page"
                     href="/"
-                    className="router-link-active router-link-exact-active flex items-center justify-center aos-init aos-animate"
+                    className="router-link-active router-link-exact-active flex items-center justify-center"
                     data-aos="fade-on"
                     data-aos-duration={2000}
                   >
@@ -352,9 +352,8 @@ function App() {
                   </a>
                   <nav>
                     <div
-                      className="flex flex-row-reverse items-center md:gap-x-12 aos-init aos-animate"
+                      className="flex flex-row-reverse items-center md:gap-x-12 group group22"
                       data-aos="fade-on"
-                      data-aos-duration={1000}
                     >
                       <div className="menu__language group cursor-pointer hidden lg:flex items-center gap-[1px] duration-200 w-auto h-[38px] border-[1px] border-solid border-[#FFFFFF33] rounded-[12px] px-[11px] overflow-hidden">
                         <i className="icon hover:text-red-500 text-[#fff]">
@@ -372,27 +371,27 @@ function App() {
                             />
                           </svg>
                         </i>
-                        <p className="transition-all font-medium text-[16px] text-[FFFFFF66] duration-300 max-w-0 opacity-0 whitespace-nowrap group-hover:mr-[12px] group-hover:!opacity-1 group-hover:max-w-[105px]">
+                        <p className="transition-all font-medium text-[16px] text-[FFFFFF66] duration-300 max-w-0 text-white opacity-0 group-hover:opacity-50 whitespace-nowrap group-hover:mr-[12px] group-hover:!opacity-1 group-hover:max-w-[105px]">
                           Language:
                         </p>
                         <a
                           aria-current="page"
                           href="/#"
-                          className="router-link-active router-link-exact-active 1 active-item font-base !opacity-1 relative text-[#fff] max-w-0 text-[16px] font-bold text-[FFFFFF66] hover:text-white group-hover:mx-[6px] group-hover:opacity-1 group-hover:max-w-[20px] transition-all duration-300 mt-[2px]"
+                          className="router-link-active router-link-exact-active 1 mr-5 active-item font-base hover:opacity-[100%] !opacity-1 relative text-[#fff] max-w-0 text-[16px] font-bold hover:text-white group-hover:mx-[6px] group-hover:opacity-1 group-hover:max-w-[20px] transition-all duration-300 mt-[2px]"
                         >
                           EN
                         </a>
                         <a
                           aria-current="page"
                           href="/#"
-                          className="router-link-active router-link-exact-active 2 opacity-0 font-base text-[#ffffff66] max-w-0 text-[16px] font-bold hover:text-white group-hover:mx-[6px] group-hover:opacity-1 group-hover:max-w-[20px] transition-all duration-300 mt-[2px]"
+                          className="router-link-active router-link-exact-active 2 text-white invisible opacity-50 hover:opacity-[100%] group-hover:visible font-base max-w-0 text-[16px] font-bold hover:text-white group-hover:mx-[6px] group-hover:opacity-1 group-hover:max-w-[20px] transition-all duration-300 mt-[2px]"
                         >
                           RU
                         </a>
                         <a
                           aria-current="page"
                           href="/#"
-                          className="router-link-active router-link-exact-active 2 opacity-0 text-[#ffffff66] max-w-0 text-[16px] font-bold hover:text-white group-hover:mx-[6px] group-hover:opacity-1 group-hover:max-w-[20px] transition-all duration-300 mt-[2px]"
+                          className="router-link-active router-link-exact-active 2 text-white invisible opacity-50 hover:opacity-[100%] group-hover:visible  max-w-0 text-[16px] font-bold hover:text-white group-hover:mx-[6px] group-hover:opacity-1 group-hover:max-w-[20px] transition-all duration-300 mt-[2px]"
                         >
                           UZ
                         </a>
@@ -449,23 +448,18 @@ function App() {
                         </li>
                       </ul>
                       <div
-                        data-v-02a5fb22=""
                         className="max-w-[70px] bg-[#ffffff33] rounded-8 z-10 text-[#ffffff99] cursor-pointer inline-flex lg:hidden"
                       >
                         <div
-                          data-v-02a5fb22=""
                           className="relative z-[100] selector"
                         >
                           <div
-                            data-v-02a5fb22=""
                             className="flex items-center justify-center gap-1.5 py-[10px] px-[12px]"
                           >
                             <div
-                              data-v-02a5fb22=""
                               className="flex icon-wrapper fill-opacity-[#fff]"
                             >
                               <i
-                                data-v-02a5fb22=""
                                 className="icon hover:text-red-500 relative globe !flex transition duration-500 -mt-0.5 ease-in-out"
                               >
                                 <svg
@@ -484,10 +478,10 @@ function App() {
                               </i>
                             </div>
                             <div
-                              data-v-02a5fb22=""
+                              
                               className="text-[13px] text-white font-bold leading-3 md:leading-4 uppercase"
                             >
-                              <span data-v-02a5fb22="" className="">
+                              <span  className="">
                                 EN
                               </span>
                             </div>
@@ -681,38 +675,55 @@ function App() {
                       <div className=" container sticky z-40 lg:pt-[316px] md:pt-[250px] sm:pt-[172px] pt-[172px]">
                         <div className=" md:max-w-[506px] w-full">
                           <h2
-                            className="text-white lg:text-[48px] lg:leading-[58px] md:text-[40px] md:leading-[50px] sm:text-[32px] sm:leading-[40px] text-[28px] leading-[34px] pb-[15px] font-bold aos-init aos-animate"
-                            data-aos="fade-left"
-                            data-aos-duration={1600}
+                            className="text-white lg:text-[48px] lg:leading-[58px] md:text-[40px] md:leading-[50px] sm:text-[32px] sm:leading-[40px] text-[28px] leading-[34px] pb-[15px] font-bold"
                           >
                             We offer digital solutions
                           </h2>
                           <p
-                            className="text-[#ffffff99] uppercase tracking-[0.03em] lg:leading-[22px] lg:text-[18px] md:leading-[20px] md:text-[16px] sm:leading-[18px] sm:text-[14px] leading-[16px] text-[13px] font-medium sm:mb-[52px] mb-[32px] aos-init aos-animate"
-                            data-aos="fade-left"
+                            className="text-[#ffffff99] uppercase tracking-[0.03em] lg:leading-[22px] lg:text-[18px] md:leading-[20px] md:text-[16px] sm:leading-[18px] sm:text-[14px] leading-[16px] text-[13px] font-medium sm:mb-[52px] mb-[32px]"
                             data-aos-duration={1700}
                           >
                             In any difficulty
                           </p>
                           <div
-                            className="flex items-center gap-[16px] aos-init aos-animate"
-                            data-aos="fade-left"
+                            className="flex items-center gap-[16px]"
                             data-aos-duration={1900}
                           >
                             <a href="/portfolio" className="">
-                              <button className="s-button rounded-[12px] lg:text-[16px] text-[13px] py-[10px] lg:!pl-6 sm:pl-4 pl-4 pr-3 md:!pr-3 md:text-[16px] sm:text-[13px] md:py-[11px] sm:py-[10px] lg:!pt-3 lg:!pb-3 flex items-center justify-center cursor-pointer transition duration-300 bg-[#1A8377] text-white border-[#00A795] border-2 hover:bg-[#00A795] hover:border-[#00A795]">
+                              <button className="s-button rounded-[12px] lg:text-[16px] group text-[13px] py-[10px] lg:!pl-6 sm:pl-4 pl-4 pr-3 md:!pr-3 md:text-[16px] sm:text-[13px] md:py-[11px] sm:py-[10px] lg:!pt-3 lg:!pb-3 flex items-center justify-center cursor-pointer transition duration-300 bg-[#1A8377] text-white border-[#00A795] border-2 hover:bg-[#00A795] hover:border-[#00A795]">
                                 <div className="text-white flex items-center gap-4">
                                   <span className="sm:text-[16px] text-[13px]">
                                     Portfolio
                                   </span>
-                                  <span className="icon-arrow icon-arrow bg-[#4CC1B5] transition duration-300 !text-[13px] md:text-base ease-in-out rounded-full w-4 h-4 md:!w-6 md:!h-6 flex items-center justify-center group-hover:rotate-45">
-                                    <FaArrowRightLong />
-                                  </span>
+                                   <i className="icon hover:text-red-500 transition duration-500 ease-in-out group-hover:rotate-45 w-[16px] h-[16px] lg:w-[24px] lg:h-[24px] flex items-center">
+                                <svg
+                                  width={24}
+                                  height={24}
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <rect
+                                    width={24}
+                                    height={24}
+                                    rx={12}
+                                    fill="white"
+                                    fillOpacity="0.3"
+                                  />
+                                  <path
+                                    d="M16.1843 14.5534L16.3807 7.28596L6.95266 16.7141M9.11326 7.48238L16.3807 7.28596L9.11326 7.48238Z"
+                                    stroke="white"
+                                    strokeWidth="1.6"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  />
+                                </svg>
+                              </i>
                                 </div>
                               </button>
                             </a>
                             <a
-                              className="!pl-[25px] !border-white text-white hover:bg-[#02A795]  flex py-[3px] md:py-0 w-fit px-[14px] sm:px-4 items-center border justify-center border-solid rounded-12 transition duration-500 ease-in-out cursor-pointer rounded-[12px] hover:border-transparent"
+                              className="!pl-[25px] !border-white text-white  hover:bg-[#02A795]  flex py-[3px] md:py-0 w-fit px-[14px] sm:px-4 items-center border justify-center border-solid rounded-12 transition  ease-in-out cursor-pointer rounded-[12px] hover:border-0 duration-200"
                               download=""
                               href="tel:+998 71 200 70 07"
                             >
@@ -898,7 +909,7 @@ function App() {
                       <div className="absolute right-[-10px] top-[-10px] z-20 translate-y-[-50%] translate-x-[50%] rotate-anim">
                         <span>
                           <i
-                            className="icon1 hover:text-red-500 text-[#fff] aos-init aos-animate"
+                            className="icon1 hover:text-red-500 text-[#fff]"
                             data-aos="zoom-in"
                             data-aos-duration={2000}
                           >
@@ -1071,7 +1082,7 @@ function App() {
                         <span></span>
                       </div>
                       <div className="mt-[-81px]">
-                        <div className="transition duration-700 ease-in-out AboutCard aos-init aos-animate">
+                        <div className="transition duration-700 ease-in-out AboutCard">
                           <div className="swiper !w-[283px] h-[450px] rounded-12 transition duration-700 ease-in-out z-10">
                             <Swiper
                               autoplay={{ delay: 2500 }}
@@ -1161,7 +1172,7 @@ function App() {
                         </span>
                       </div>
                       <div className="about-card2-wrapper">
-                        <div className="transition duration-700 ease-in-out AboutCard aos-init aos-animate">
+                        <div className="transition duration-700 ease-in-out AboutCard">
                           <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper !w-[283px] h-[450px] rounded-12 transition duration-700 ease-in-out z-10">
                             <Swiper
                               autoplay={{ delay: 2500 }}
@@ -1243,24 +1254,19 @@ function App() {
                     </div>
                     <div className="">
                       <p
-                        data-aos="fade-left"
-                        data-aos-duration={1500}
-                        className="text xs:text-[13px] items-center space-x-2 flex md:!text-base text-[#00A795] uppercase font-bold leading-[19px] pb-2 md:pb-5 about-us aos-init aos-animate"
+                        className="text xs:text-[13px] items-center space-x-2 flex md:!text-base text-[#00A795] uppercase font-bold leading-[19px] pb-2 md:pb-5 about-us"
                       >
                         <div className="h-[1.2px] w-[30px] bg-[#4B4B4D]"></div>
                         <span>In the world</span>
                       </p>
                       <h2
-                        data-aos="fade-left"
-                        data-aos-duration={1600}
-                        className="text-white xs:text-[28px] md:!text-5xl xs:pb-3 lg:!pb-8 leading-[58px] font-bold aos-init aos-animate"
+                        className="text-white xs:text-[28px] md:!text-5xl xs:pb-3 lg:!pb-8 leading-[58px] font-bold"
                       >
                         About us
                       </h2>
                       <h2
-                        data-aos="fade-left"
                         data-aos-duration={1700}
-                        className="text-[#E0E0E099] xs:text-[13px] md:!text-base font-normal xl:!w-[458px] font-roboto sm:w-full aos-init aos-animate"
+                        className="text-[#E0E0E099] xs:text-[13px] md:!text-base font-normal xl:!w-[458px] font-roboto sm:w-full"
                       >
                         Every big company needs to thank not only itself, but
                         also those who have stood beside it and believed in it.
@@ -1268,9 +1274,8 @@ function App() {
                         trust.
                       </h2>
                       <h2
-                        data-aos="fade-left"
                         data-aos-duration={1800}
-                        className="text-[#E0E0E099] xs:text-[13px] md:!text-base font-normal pt-2 xl:!w-[458px] font-roboto sm:w-full aos-init aos-animate"
+                        className="text-[#E0E0E099] xs:text-[13px] md:!text-base font-normal pt-2 xl:!w-[458px] font-roboto sm:w-full"
                       >
                         Trust not only ensures the loyalty of customers and
                         partners, but also increases our demand for ourselves.
@@ -1278,9 +1283,8 @@ function App() {
                         thousand-year human traditions.
                       </h2>
                       <div
-                        data-aos="fade-left"
                         data-aos-duration={1900}
-                        className="pt-3 flex items-center xs:items-start xs:justify-around xl:!justify-center xs:gap-[22px] gap-[12px] sm:gap-0 xl:!gap-[84px] aos-init aos-animate"
+                        className="pt-3 flex items-center xs:items-start xs:justify-around xl:!justify-center xs:gap-[22px] gap-[12px] sm:gap-0 xl:!gap-[84px]"
                       >
                         <span className="flex items-center justify-center xs:gap-[19px] md:!gap-7">
                           <i className="icon hover:text-red-500 text-[#00A795] mr-1">
@@ -1332,8 +1336,7 @@ function App() {
                         </span>
                       </div>
                       <div
-                        className="flex items-center gap-[16px] mt-[58px] aos-init aos-animate"
-                        data-aos="fade-left"
+                        className="flex items-center gap-[16px] mt-[58px]"
                         data-aos-duration={1900}
                       >
                         <a href="/portfolio" className="">
@@ -1403,16 +1406,12 @@ function App() {
                   <div className="portfolio-section bg-[#141415] pt-8 sm:pt-[60px] md:pt-[118px] pb-[96px]">
                     <div className="container">
                       <div
-                        className="flex items-start justify-between max-lg:flex-col text-white mb-8 md:mb-12 aos-init aos-animate"
-                        data-aos="fade-right"
-                        data-aos-duration={600}
+                        className="flex items-start justify-between max-lg:flex-col text-white mb-8 md:mb-12"
                       >
                         <div
-                          data-v-393aadc3=""
                           className="container-video max-lg:mb-5"
                         >
                           <p
-                            data-v-393aadc3=""
                             className="bg-[#141415] font-bold uppercase text-[32px] md:text-[64px] text-white leading-[130%]"
                           >
                             portfolio
@@ -1445,409 +1444,321 @@ function App() {
                           </a>
                         </div>
                       </div>
-                      <div data-v-1543d56d="" className="index-portfolio">
-                        <div data-v-1543d56d="" className="portfos">
-                          <a
-                            data-v-1543d56d=""
-                            href="/portfolio/uzbekistans-club"
-                            className="relative z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6 _big aos-init aos-animate"
-                            data-aos="fade-right"
-                            data-aos-duration={900}
-                          >
-                            <div data-v-1543d56d="">
-                              <div
-                                data-v-1543d56d=""
-                                className="lg:text-[38px] lg:leading-[45px] lg:mb-2 !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3"
-                              >
-                                Uzbekistan's Club
-                              </div>
-                              <p
-                                data-v-1543d56d=""
-                                className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5"
-                              >
-                                Website
-                              </p>
-                            </div>
-                            <img
-                              data-v-1543d56d=""
-                              src="https://uic.group/media/cache/0c/39/0c392b9a99ead3fb208087f2a1e1e145.jpg"
-                              alt="Portfolio image"
-                              className="absolute inset-0 -z-[4] w-full h-full object-cover"
-                            />
-                            <div
-                              data-v-1543d56d=""
-                              className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end"
+                      <div className="index-portfolio">
+                        <div className="portfos">
+                          <div className="grid grid-cols-2 space-x-[20px]">
+                            <a
+                              href="/portfolio/uzbekistans-club"
+                              className="relative rounded-[12px] overflow-hidden z-10 h-[424px] w-[572px] cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6 _big"
+                              data-aos-duration={900}
                             >
-                              <p
-                                data-v-1543d56d=""
-                                className="text-sm font-bold text-white uppercase leading-120"
-                              >
-                                View more
-                              </p>
-                              <i
-                                data-v-1543d56d=""
-                                className="icon hover:text-red-500 text-white rightArrowWhite"
-                              >
-                                <svg
-                                  width={46}
-                                  height={46}
-                                  viewBox="0 0 46 46"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <g clipPath="url(#clip0_2269_2775)">
-                                    <rect
-                                      width={46}
-                                      height={46}
-                                      rx={23}
-                                      fill="#fff"
-                                      fillOpacity="0.3"
-                                    />
-                                    <path
-                                      d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
-                                      stroke="#fff"
-                                      strokeWidth="1.6"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clipPath id="clip0_2269_2775">
+                              <div>
+                                <div className="lg:text-[38px] lg:leading-[45px] lg:mb-2 !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3">
+                                  Uzbekistan's Club
+                                </div>
+                                <p className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5">
+                                  Website
+                                </p>
+                              </div>
+                              <img
+                                src="https://uic.group/media/cache/0c/39/0c392b9a99ead3fb208087f2a1e1e145.jpg"
+                                alt="Portfolio image"
+                                className="absolute inset-0 -z-[4] w-full h-full object-cover"
+                              />
+                              <div className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end">
+                                <p className="text-sm font-bold text-white uppercase leading-120">
+                                  View more
+                                </p>
+                                <i className="icon hover:text-red-500 text-white rightArrowWhite">
+                                  <svg
+                                    width={46}
+                                    height={46}
+                                    viewBox="0 0 46 46"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <g clipPath="url(#clip0_2269_2775)">
                                       <rect
                                         width={46}
                                         height={46}
                                         rx={23}
                                         fill="#fff"
+                                        fillOpacity="0.3"
                                       />
-                                    </clipPath>
-                                  </defs>
-                                </svg>
-                              </i>
-                            </div>
-                          </a>
-                          <a
-                            data-v-1543d56d=""
-                            href="/portfolio/anatomica-website"
-                            className="relative z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6 aos-init aos-animate"
-                            data-aos="fade-right"
-                            data-aos-duration={1000}
-                          >
-                            <div data-v-1543d56d="">
-                              <div
-                                data-v-1543d56d=""
-                                className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3"
-                              >
-                                Anatomica
+                                      <path
+                                        d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
+                                        stroke="#fff"
+                                        strokeWidth="1.6"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                      />
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_2269_2775">
+                                        <rect
+                                          width={46}
+                                          height={46}
+                                          rx={23}
+                                          fill="#fff"
+                                        />
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                </i>
                               </div>
-                              <p
-                                data-v-1543d56d=""
-                                className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5"
+                            </a>
+                            <div className="grid grid-cols-2 gap-[20px]">
+                              <a
+                                href="/portfolio/anatomica-website"
+                                className="relative z-10 rounded-[12px] overflow-hidden cursor-pointer portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6"
                               >
-                                Website
-                              </p>
-                            </div>
-                            <img
-                              data-v-1543d56d=""
-                              src="https://uic.group/media/cache/29/88/29883e26588ac429b3ca86b3ac39efa6.jpg"
-                              alt="Portfolio image"
-                              className="absolute inset-0 -z-[4] w-full h-full object-cover"
-                            />
-                            <div
-                              data-v-1543d56d=""
-                              className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end"
-                            >
-                              <i
-                                data-v-1543d56d=""
-                                className="icon hover:text-red-500 text-white rightArrowWhite"
-                              >
-                                <svg
-                                  width={46}
-                                  height={46}
-                                  viewBox="0 0 46 46"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <g clipPath="url(#clip0_2269_2775)">
-                                    <rect
+                                <div>
+                                  <div className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3">
+                                    Anatomica
+                                  </div>
+                                  <p className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5">
+                                    Website
+                                  </p>
+                                </div>
+                                <img
+                                  src="https://uic.group/media/cache/29/88/29883e26588ac429b3ca86b3ac39efa6.jpg"
+                                  alt="Portfolio image"
+                                  className="absolute inset-0 -z-[4] w-full h-full object-cover"
+                                />
+                                <div className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end">
+                                  <i className="icon hover:text-red-500 text-white rightArrowWhite">
+                                    <svg
                                       width={46}
                                       height={46}
-                                      rx={23}
-                                      fill="#fff"
-                                      fillOpacity="0.3"
-                                    />
-                                    <path
-                                      d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
-                                      stroke="#fff"
-                                      strokeWidth="1.6"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clipPath id="clip0_2269_2775">
-                                      <rect
-                                        width={46}
-                                        height={46}
-                                        rx={23}
-                                        fill="#fff"
-                                      />
-                                    </clipPath>
-                                  </defs>
-                                </svg>
-                              </i>
-                            </div>
-                          </a>
-                          <a
-                            data-v-1543d56d=""
-                            href="/portfolio/anatomica-app"
-                            className="relative z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6 aos-init aos-animate"
-                            data-aos="fade-right"
-                            data-aos-duration={1100}
-                          >
-                            <div data-v-1543d56d="">
-                              <div
-                                data-v-1543d56d=""
-                                className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3"
+                                      viewBox="0 0 46 46"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <g clipPath="url(#clip0_2269_2775)">
+                                        <rect
+                                          width={46}
+                                          height={46}
+                                          rx={23}
+                                          fill="#fff"
+                                          fillOpacity="0.3"
+                                        />
+                                        <path
+                                          d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
+                                          stroke="#fff"
+                                          strokeWidth="1.6"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                        />
+                                      </g>
+                                      <defs>
+                                        <clipPath id="clip0_2269_2775">
+                                          <rect
+                                            width={46}
+                                            height={46}
+                                            rx={23}
+                                            fill="#fff"
+                                          />
+                                        </clipPath>
+                                      </defs>
+                                    </svg>
+                                  </i>
+                                </div>
+                              </a>
+                              <a
+                                href="/portfolio/anatomica-app"
+                                className="relative rounded-[12px] overflow-hidden z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6"
+                                data-aos-duration={1100}
                               >
-                                Anatomica App
-                              </div>
-                              <p
-                                data-v-1543d56d=""
-                                className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5"
-                              >
-                                Mobile app
-                              </p>
-                            </div>
-                            <img
-                              data-v-1543d56d=""
-                              src="https://uic.group/media/cache/cc/39/cc392cc7e6083d974df22bdf3f7baae3.jpg"
-                              alt="Portfolio image"
-                              className="absolute inset-0 -z-[4] w-full h-full object-cover"
-                            />
-                            <div
-                              data-v-1543d56d=""
-                              className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end"
-                            >
-                              <i
-                                data-v-1543d56d=""
-                                className="icon hover:text-red-500 text-white rightArrowWhite"
-                              >
-                                <svg
-                                  width={46}
-                                  height={46}
-                                  viewBox="0 0 46 46"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <g clipPath="url(#clip0_2269_2775)">
-                                    <rect
+                                <div>
+                                  <div className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3">
+                                    Anatomica App
+                                  </div>
+                                  <p className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5">
+                                    Mobile app
+                                  </p>
+                                </div>
+                                <img
+                                  src="https://uic.group/media/cache/cc/39/cc392cc7e6083d974df22bdf3f7baae3.jpg"
+                                  alt="Portfolio image"
+                                  className="absolute inset-0 -z-[4] w-full h-full object-cover"
+                                />
+                                <div className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end">
+                                  <i className="icon hover:text-red-500 text-white rightArrowWhite">
+                                    <svg
                                       width={46}
                                       height={46}
-                                      rx={23}
-                                      fill="#fff"
-                                      fillOpacity="0.3"
-                                    />
-                                    <path
-                                      d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
-                                      stroke="#fff"
-                                      strokeWidth="1.6"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clipPath id="clip0_2269_2775">
-                                      <rect
-                                        width={46}
-                                        height={46}
-                                        rx={23}
-                                        fill="#fff"
-                                      />
-                                    </clipPath>
-                                  </defs>
-                                </svg>
-                              </i>
-                            </div>
-                          </a>
-                          <a
-                            data-v-1543d56d=""
-                            href="/portfolio/express24"
-                            className="relative z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6 aos-init aos-animate"
-                            data-aos="fade-right"
-                            data-aos-duration={1200}
-                          >
-                            <div data-v-1543d56d="">
-                              <div
-                                data-v-1543d56d=""
-                                className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3"
+                                      viewBox="0 0 46 46"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <g clipPath="url(#clip0_2269_2775)">
+                                        <rect
+                                          width={46}
+                                          height={46}
+                                          rx={23}
+                                          fill="#fff"
+                                          fillOpacity="0.3"
+                                        />
+                                        <path
+                                          d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
+                                          stroke="#fff"
+                                          strokeWidth="1.6"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                        />
+                                      </g>
+                                      <defs>
+                                        <clipPath id="clip0_2269_2775">
+                                          <rect
+                                            width={46}
+                                            height={46}
+                                            rx={23}
+                                            fill="#fff"
+                                          />
+                                        </clipPath>
+                                      </defs>
+                                    </svg>
+                                  </i>
+                                </div>
+                              </a>
+                              <a
+                                href="/portfolio/express24"
+                                className="relative rounded-[12px] overflow-hidden z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6"
+                                data-aos-duration={1200}
                               >
-                                Express24
-                              </div>
-                              <p
-                                data-v-1543d56d=""
-                                className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5"
-                              >
-                                Mobile app
-                              </p>
-                            </div>
-                            <img
-                              data-v-1543d56d=""
-                              src="https://uic.group/media/cache/59/f1/59f1ca58bab7263f9c5eaff3033d5951.jpg"
-                              alt="Portfolio image"
-                              className="absolute inset-0 -z-[4] w-full h-full object-cover"
-                            />
-                            <div
-                              data-v-1543d56d=""
-                              className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end"
-                            >
-                              <i
-                                data-v-1543d56d=""
-                                className="icon hover:text-red-500 text-white rightArrowWhite"
-                              >
-                                <svg
-                                  width={46}
-                                  height={46}
-                                  viewBox="0 0 46 46"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <g clipPath="url(#clip0_2269_2775)">
-                                    <rect
+                                <div>
+                                  <div className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3">
+                                    Express24
+                                  </div>
+                                  <p className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5">
+                                    Mobile app
+                                  </p>
+                                </div>
+                                <img
+                                  src="https://uic.group/media/cache/59/f1/59f1ca58bab7263f9c5eaff3033d5951.jpg"
+                                  alt="Portfolio image"
+                                  className="absolute inset-0 -z-[4] w-full h-full object-cover"
+                                />
+                                <div className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end">
+                                  <i className="icon hover:text-red-500 text-white rightArrowWhite">
+                                    <svg
                                       width={46}
                                       height={46}
-                                      rx={23}
-                                      fill="#fff"
-                                      fillOpacity="0.3"
-                                    />
-                                    <path
-                                      d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
-                                      stroke="#fff"
-                                      strokeWidth="1.6"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clipPath id="clip0_2269_2775">
-                                      <rect
-                                        width={46}
-                                        height={46}
-                                        rx={23}
-                                        fill="#fff"
-                                      />
-                                    </clipPath>
-                                  </defs>
-                                </svg>
-                              </i>
-                            </div>
-                          </a>
-                          <a
-                            data-v-1543d56d=""
-                            href="/portfolio/toshkent-parfyum-app"
-                            className="relative z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6 aos-init aos-animate"
-                            data-aos="fade-right"
-                            data-aos-duration={1300}
-                          >
-                            <div data-v-1543d56d="">
-                              <div
-                                data-v-1543d56d=""
-                                className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3"
+                                      viewBox="0 0 46 46"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <g clipPath="url(#clip0_2269_2775)">
+                                        <rect
+                                          width={46}
+                                          height={46}
+                                          rx={23}
+                                          fill="#fff"
+                                          fillOpacity="0.3"
+                                        />
+                                        <path
+                                          d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
+                                          stroke="#fff"
+                                          strokeWidth="1.6"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                        />
+                                      </g>
+                                      <defs>
+                                        <clipPath id="clip0_2269_2775">
+                                          <rect
+                                            width={46}
+                                            height={46}
+                                            rx={23}
+                                            fill="#fff"
+                                          />
+                                        </clipPath>
+                                      </defs>
+                                    </svg>
+                                  </i>
+                                </div>
+                              </a>
+                              <a
+                                href="/portfolio/toshkent-parfyum-app"
+                                className="relative rounded-[12px] overflow-hidden z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6"
+                                data-aos-duration={1300}
                               >
-                                Toshkent Parfum
-                              </div>
-                              <p
-                                data-v-1543d56d=""
-                                className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5"
-                              >
-                                Mobile app
-                              </p>
-                            </div>
-                            <img
-                              data-v-1543d56d=""
-                              src="https://uic.group/media/cache/b6/27/b6273a3cbd3fe1e5ad0e9b9acdccdfc4.jpg"
-                              alt="Portfolio image"
-                              className="absolute inset-0 -z-[4] w-full h-full object-cover"
-                            />
-                            <div
-                              data-v-1543d56d=""
-                              className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end"
-                            >
-                              <i
-                                data-v-1543d56d=""
-                                className="icon hover:text-red-500 text-white rightArrowWhite"
-                              >
-                                <svg
-                                  width={46}
-                                  height={46}
-                                  viewBox="0 0 46 46"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <g clipPath="url(#clip0_2269_2775)">
-                                    <rect
+                                <div>
+                                  <div className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3">
+                                    Toshkent Parfum
+                                  </div>
+                                  <p className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5">
+                                    Mobile app
+                                  </p>
+                                </div>
+                                <img
+                                  src="https://uic.group/media/cache/b6/27/b6273a3cbd3fe1e5ad0e9b9acdccdfc4.jpg"
+                                  alt="Portfolio image"
+                                  className="absolute inset-0 -z-[4] w-full h-full object-cover"
+                                />
+                                <div className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end">
+                                  <i className="icon hover:text-red-500 text-white rightArrowWhite">
+                                    <svg
                                       width={46}
                                       height={46}
-                                      rx={23}
-                                      fill="#fff"
-                                      fillOpacity="0.3"
-                                    />
-                                    <path
-                                      d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
-                                      stroke="#fff"
-                                      strokeWidth="1.6"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clipPath id="clip0_2269_2775">
-                                      <rect
-                                        width={46}
-                                        height={46}
-                                        rx={23}
-                                        fill="#fff"
-                                      />
-                                    </clipPath>
-                                  </defs>
-                                </svg>
-                              </i>
+                                      viewBox="0 0 46 46"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <g clipPath="url(#clip0_2269_2775)">
+                                        <rect
+                                          width={46}
+                                          height={46}
+                                          rx={23}
+                                          fill="#fff"
+                                          fillOpacity="0.3"
+                                        />
+                                        <path
+                                          d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
+                                          stroke="#fff"
+                                          strokeWidth="1.6"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                        />
+                                      </g>
+                                      <defs>
+                                        <clipPath id="clip0_2269_2775">
+                                          <rect
+                                            width={46}
+                                            height={46}
+                                            rx={23}
+                                            fill="#fff"
+                                          />
+                                        </clipPath>
+                                      </defs>
+                                    </svg>
+                                  </i>
+                                </div>
+                              </a>
                             </div>
-                          </a>
-                          <a
-                            data-v-1543d56d=""
+                          </div>
+                          <div className="flex space-x-[20px] mt-[25px]">
+                          <div className="grid grid-cols-1 gap-[20px]">
+                            <a
                             href="/portfolio/toshkent-parfyum"
-                            className="relative z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6 aos-init aos-animate"
-                            data-aos="fade-right"
+                            className="relative z-10 h-[200] w-[274px] rounded-[12px] overflow-hidden cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6"
                             data-aos-duration={1400}
                           >
-                            <div data-v-1543d56d="">
-                              <div
-                                data-v-1543d56d=""
-                                className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3"
-                              >
+                            <div>
+                              <div className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3">
                                 Toshkent Parfum
                               </div>
-                              <p
-                                data-v-1543d56d=""
-                                className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5"
-                              >
+                              <p className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5">
                                 Website
                               </p>
                             </div>
                             <img
-                              data-v-1543d56d=""
                               src="https://uic.group/media/cache/b3/6b/b36bc02390ec157e4a4a99eb5c0643b2.jpg"
                               alt="Portfolio image"
                               className="absolute inset-0 -z-[4] w-full h-full object-cover"
                             />
-                            <div
-                              data-v-1543d56d=""
-                              className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end"
-                            >
-                              <i
-                                data-v-1543d56d=""
-                                className="icon hover:text-red-500 text-white rightArrowWhite"
-                              >
+                            <div className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end">
+                              <i className="icon hover:text-red-500 text-white rightArrowWhite">
                                 <svg
                                   width={46}
                                   height={46}
@@ -1884,192 +1795,27 @@ function App() {
                                 </svg>
                               </i>
                             </div>
-                          </a>
+                          </a>   
                           <a
-                            data-v-1543d56d=""
-                            href="/portfolio/world-assosiciation-of-youth-of-uzbekistan"
-                            className="relative z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6 _big aos-init aos-animate"
-                            data-aos="fade-right"
-                            data-aos-duration={1500}
-                          >
-                            <div data-v-1543d56d="">
-                              <div
-                                data-v-1543d56d=""
-                                className="lg:text-[38px] lg:leading-[45px] lg:mb-2 !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3"
-                              >
-                                WAYU
-                              </div>
-                              <p
-                                data-v-1543d56d=""
-                                className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5"
-                              >
-                                Website
-                              </p>
-                            </div>
-                            <img
-                              data-v-1543d56d=""
-                              src="https://uic.group/media/cache/77/4d/774ddc33fda844b44bb597539531dec6.jpg"
-                              alt="Portfolio image"
-                              className="absolute inset-0 -z-[4] w-full h-full object-cover"
-                            />
-                            <div
-                              data-v-1543d56d=""
-                              className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end"
-                            >
-                              <p
-                                data-v-1543d56d=""
-                                className="text-sm font-bold text-white uppercase leading-120"
-                              >
-                                View more
-                              </p>
-                              <i
-                                data-v-1543d56d=""
-                                className="icon hover:text-red-500 text-white rightArrowWhite"
-                              >
-                                <svg
-                                  width={46}
-                                  height={46}
-                                  viewBox="0 0 46 46"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <g clipPath="url(#clip0_2269_2775)">
-                                    <rect
-                                      width={46}
-                                      height={46}
-                                      rx={23}
-                                      fill="#fff"
-                                      fillOpacity="0.3"
-                                    />
-                                    <path
-                                      d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
-                                      stroke="#fff"
-                                      strokeWidth="1.6"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clipPath id="clip0_2269_2775">
-                                      <rect
-                                        width={46}
-                                        height={46}
-                                        rx={23}
-                                        fill="#fff"
-                                      />
-                                    </clipPath>
-                                  </defs>
-                                </svg>
-                              </i>
-                            </div>
-                          </a>
-                          <a
-                            data-v-1543d56d=""
-                            href="/portfolio/ricomel"
-                            className="relative z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6 aos-init aos-animate"
-                            data-aos="fade-right"
-                            data-aos-duration={1600}
-                          >
-                            <div data-v-1543d56d="">
-                              <div
-                                data-v-1543d56d=""
-                                className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3"
-                              >
-                                Ricomel
-                              </div>
-                              <p
-                                data-v-1543d56d=""
-                                className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5"
-                              >
-                                Website
-                              </p>
-                            </div>
-                            <img
-                              data-v-1543d56d=""
-                              src="https://uic.group/media/cache/30/da/30da918dacc113dd034fb5dbb8063282.jpg"
-                              alt="Portfolio image"
-                              className="absolute inset-0 -z-[4] w-full h-full object-cover"
-                            />
-                            <div
-                              data-v-1543d56d=""
-                              className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end"
-                            >
-                              <i
-                                data-v-1543d56d=""
-                                className="icon hover:text-red-500 text-white rightArrowWhite"
-                              >
-                                <svg
-                                  width={46}
-                                  height={46}
-                                  viewBox="0 0 46 46"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <g clipPath="url(#clip0_2269_2775)">
-                                    <rect
-                                      width={46}
-                                      height={46}
-                                      rx={23}
-                                      fill="#fff"
-                                      fillOpacity="0.3"
-                                    />
-                                    <path
-                                      d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
-                                      stroke="#fff"
-                                      strokeWidth="1.6"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clipPath id="clip0_2269_2775">
-                                      <rect
-                                        width={46}
-                                        height={46}
-                                        rx={23}
-                                        fill="#fff"
-                                      />
-                                    </clipPath>
-                                  </defs>
-                                </svg>
-                              </i>
-                            </div>
-                          </a>
-                          <a
-                            data-v-1543d56d=""
                             href="/portfolio/Uzbekistans-club-app"
-                            className="relative z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6 aos-init aos-animate"
-                            data-aos="fade-right"
+                            className="relative z-10 h-[200] w-[274px] rounded-[12px] overflow-hidden cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6"
                             data-aos-duration={1700}
                           >
-                            <div data-v-1543d56d="">
-                              <div
-                                data-v-1543d56d=""
-                                className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3"
-                              >
+                            <div>
+                              <div className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3">
                                 Uzbekistan's club App
                               </div>
-                              <p
-                                data-v-1543d56d=""
-                                className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5"
-                              >
+                              <p className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5">
                                 Mobile app
                               </p>
                             </div>
                             <img
-                              data-v-1543d56d=""
                               src="https://uic.group/media/cache/bf/05/bf057b6e96af88ea2c68d1da6a1ee07e.jpg"
                               alt="Portfolio image"
                               className="absolute inset-0 -z-[4] w-full h-full object-cover"
                             />
-                            <div
-                              data-v-1543d56d=""
-                              className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end"
-                            >
-                              <i
-                                data-v-1543d56d=""
-                                className="icon hover:text-red-500 text-white rightArrowWhite"
-                              >
+                            <div className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end">
+                              <i className="icon hover:text-red-500 text-white rightArrowWhite">
                                 <svg
                                   width={46}
                                   height={46}
@@ -2107,41 +1853,30 @@ function App() {
                               </i>
                             </div>
                           </a>
-                          <a
-                            data-v-1543d56d=""
-                            href="/portfolio/infomax"
-                            className="relative z-10 cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6 aos-init aos-animate"
-                            data-aos="fade-right"
-                            data-aos-duration={1800}
+                          </div>
+                          <div>
+                            <a
+                            href="/portfolio/world-assosiciation-of-youth-of-uzbekistan"
+                            className="relative z-10 h-[424px] w-[572px] rounded-[12px] overflow-hidden cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6 _big"
                           >
-                            <div data-v-1543d56d="">
-                              <div
-                                data-v-1543d56d=""
-                                className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3"
-                              >
-                                Infomax freight
+                            <div>
+                              <div className="lg:text-[38px] lg:leading-[45px] lg:mb-2 !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3">
+                                WAYU
                               </div>
-                              <p
-                                data-v-1543d56d=""
-                                className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5"
-                              >
+                              <p className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5">
                                 Website
                               </p>
                             </div>
                             <img
-                              data-v-1543d56d=""
-                              src="https://uic.group/media/cache/d4/e7/d4e7073d362f8d5a16efbb3e656fc4ee.jpg"
+                              src="https://uic.group/media/cache/77/4d/774ddc33fda844b44bb597539531dec6.jpg"
                               alt="Portfolio image"
                               className="absolute inset-0 -z-[4] w-full h-full object-cover"
                             />
-                            <div
-                              data-v-1543d56d=""
-                              className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end"
-                            >
-                              <i
-                                data-v-1543d56d=""
-                                className="icon hover:text-red-500 text-white rightArrowWhite"
-                              >
+                            <div className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end">
+                              <p className="text-sm font-bold text-white uppercase leading-120">
+                                View more
+                              </p>
+                              <i className="icon hover:text-red-500 text-white rightArrowWhite">
                                 <svg
                                   width={46}
                                   height={46}
@@ -2179,13 +1914,129 @@ function App() {
                               </i>
                             </div>
                           </a>
+                          </div>
+                          <div className="grid grid-cols-1 space-y-[20px]"> 
+                            <a
+                            href="/portfolio/ricomel"
+                            className="relative z-10 w-[274px] h-[200px] overflow-hidden rounded-[12px] cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6"
+                          >
+                            <div>
+                              <div className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3">
+                                Ricomel
+                              </div>
+                              <p className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5">
+                                Website
+                              </p>
+                            </div>
+                            <img
+                              src="https://uic.group/media/cache/30/da/30da918dacc113dd034fb5dbb8063282.jpg"
+                              alt="Portfolio image"
+                              className="absolute inset-0 -z-[4] w-full h-full object-cover"
+                            />
+                            <div className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end">
+                              <i className="icon hover:text-red-500 text-white rightArrowWhite">
+                                <svg
+                                  width={46}
+                                  height={46}
+                                  viewBox="0 0 46 46"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g clipPath="url(#clip0_2269_2775)">
+                                    <rect
+                                      width={46}
+                                      height={46}
+                                      rx={23}
+                                      fill="#fff"
+                                      fillOpacity="0.3"
+                                    />
+                                    <path
+                                      d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
+                                      stroke="#fff"
+                                      strokeWidth="1.6"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2269_2775">
+                                      <rect
+                                        width={46}
+                                        height={46}
+                                        rx={23}
+                                        fill="#fff"
+                                      />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                              </i>
+                            </div>
+                          </a>
+                           <a
+                            href="/portfolio/infomax"
+                            className="relative z-10 w-[274px] h-[200px] overflow-hidden rounded-[12px] cursor-pointer rounded-12 portfos__box group bg-img flex flex-col justify-between p-2 sm:p-3 md:p-6"
+                            data-aos-duration={1800}
+                          >
+                            <div>
+                              <div className="lg:text-2xl lg:leading-[49px] lg:mb-[6px] !leading-[120%] text-white text-sm sm:text-base md:text-2xl sm:leading-[22px] font-bold !mb-1 line-clamp-3">
+                                Infomax freight
+                              </div>
+                              <p className="text-xs font-semibold leading-3 uppercase text-white/60 lg:text-sm sm:leading-5">
+                                Website
+                              </p>
+                            </div>
+                            <img
+                              src="https://uic.group/media/cache/d4/e7/d4e7073d362f8d5a16efbb3e656fc4ee.jpg"
+                              alt="Portfolio image"
+                              className="absolute inset-0 -z-[4] w-full h-full object-cover"
+                            />
+                            <div className="group-hover:translate-x-0 sm:group-hover:opacity-100 -translate-x-6 flex items-center gap-5 opacity-0 transition duration-300 self-end">
+                              <i className="icon hover:text-red-500 text-white rightArrowWhite">
+                                <svg
+                                  width={46}
+                                  height={46}
+                                  viewBox="0 0 46 46"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g clipPath="url(#clip0_2269_2775)">
+                                    <rect
+                                      width={46}
+                                      height={46}
+                                      rx={23}
+                                      fill="#fff"
+                                      fillOpacity="0.3"
+                                    />
+                                    <path
+                                      d="M25.2104 32.1316L35.3261 22.5483L9.77056 22.5483M25.2104 12.965L35.3261 22.5483L25.2104 12.965Z"
+                                      stroke="#fff"
+                                      strokeWidth="1.6"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_2269_2775">
+                                      <rect
+                                        width={46}
+                                        height={46}
+                                        rx={23}
+                                        fill="#fff"
+                                      />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                              </i>
+                            </div>
+                          </a>
+                          </div
+                          ></div>
+                         
                         </div>
                       </div>
                       <div className="md:w-[180px] sm:w-[140px] w-[122px] !h-12">
                         <div
-                          className="group mt-8 index-portfolio !rounded-lg !whitespace-nowrap aos-init aos-animate"
-                          data-aos="fade-right"
-                          data-aos-duration={600}
+                          className="group mt-8 index-portfolio !rounded-lg !whitespace-nowrap"
                           small=""
                         >
                           <a
@@ -2226,31 +2077,28 @@ function App() {
                   </div>
                   <div className="container py-10 md:py-[60px] lg:py-24">
                     <p
-                      className="section-title_green about-us aos-init aos-animate"
+                      className=" flex space-x-2 items-center about-us"
                       data-aos="fade-down"
                       data-aos-duration={700}
                     >
-                      Our
+                     <span className="text-[#00a795] text-[16px] font-[600]">OUR</span><div className="h-[1.3px] w-[32px] bg-[#fff] opacity-[.2]"></div>
                     </p>
                     <div
-                      className="section-title_white mb-4 md:mb-[45px] lg:mb-[56px] aos-init aos-animate"
-                      data-aos="fade-down"
-                      data-aos-duration={600}
+                      className="text-[48px] font-[700] text-white mb-4 md:mb-[45px] lg:mb-[56px]"
                     >
                       Services
                     </div>
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                       <a
                         href="/brief/websites"
-                        className="h-full p-3 transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8 aos-init aos-animate"
+                        className="h-full p-3 box-shadowww bg-[#252527] rounded-[12px] transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8"
                         data-aos-duration={500}
-                        data-aos="fade-right"
                       >
                         <div className="max-w-[380px]">
-                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-120 mb-1 sm:mb-3 line-clamp-2">
+                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-[40px] mb-1 sm:mb-3 ">
                             Web Development
                           </h3>
-                          <p className="text-gray font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
+                          <p className="text-gray text-[#e0e0e099] font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
                             We develop websites with the high quality, from
                             corporate websites to web applications
                           </p>
@@ -2258,15 +2106,13 @@ function App() {
                       </a>
                       <a
                         href="/brief/mobile-application"
-                        className="h-full p-3 transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8 aos-init aos-animate"
-                        data-aos-duration={600}
-                        data-aos="fade-right"
+                        className="h-full p-3 box-shadowww bg-[#252527] rounded-[12px]  transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8"
                       >
                         <div className="max-w-[380px]">
-                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-120 mb-1 sm:mb-3 line-clamp-2">
+                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-[40px] mb-1 sm:mb-3 line-clamp-2">
                             Mobile apps
                           </h3>
-                          <p className="text-gray font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
+                          <p className="text-gray text-[#e0e0e099] font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
                             Development and technical support of mobile
                             applications of any complexity
                           </p>
@@ -2274,15 +2120,14 @@ function App() {
                       </a>
                       <a
                         href="/brief/design"
-                        className="h-full p-3 transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8 aos-init aos-animate"
+                        className="h-full p-3 box-shadowww bg-[#252527] rounded-[12px] transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8"
                         data-aos-duration={700}
-                        data-aos="fade-right"
                       >
                         <div className="max-w-[380px]">
-                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-120 mb-1 sm:mb-3 line-clamp-2">
+                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-[40px] mb-1 sm:mb-3 line-clamp-2">
                             UI&amp;UX
                           </h3>
-                          <p className="text-gray font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
+                          <p className="text-gray text-[#e0e0e099] font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
                             Developing a project MindMap and designing it with
                             the optimal solution based on its architecture
                           </p>
@@ -2290,15 +2135,13 @@ function App() {
                       </a>
                       <a
                         href="/brief/media-production"
-                        className="h-full p-3 transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8 aos-init aos-animate"
-                        data-aos-duration={800}
-                        data-aos="fade-right"
+                        className="h-full p-3 box-shadowww bg-[#252527] rounded-[12px] transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8"
                       >
                         <div className="max-w-[380px]">
-                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-120 mb-1 sm:mb-3 line-clamp-2">
+                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-[40px] mb-1 sm:mb-3 line-clamp-2">
                             Media production
                           </h3>
-                          <p className="text-gray font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
+                          <p className="text-gray text-[#e0e0e099] font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
                             Professional preparation of 2D / 3D animation,
                             project presentation, advertising, video and other
                             media resources.
@@ -2307,15 +2150,14 @@ function App() {
                       </a>
                       <a
                         href="/brief/crm-systems"
-                        className="h-full p-3 transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8 aos-init aos-animate"
+                        className="h-full p-3 box-shadowww bg-[#252527] rounded-[12px] transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8"
                         data-aos-duration={900}
-                        data-aos="fade-right"
                       >
                         <div className="max-w-[380px]">
-                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-120 mb-1 sm:mb-3 line-clamp-2">
+                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-[40px] mb-1 sm:mb-3 line-clamp-2">
                             CRM Systems
                           </h3>
-                          <p className="text-gray font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
+                          <p className="text-gray text-[#e0e0e099] font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
                             Automation of business and processes, development of
                             electronic management systems that reduce paper-work
                             by 100%
@@ -2324,15 +2166,13 @@ function App() {
                       </a>
                       <a
                         href="/brief/logo-branding"
-                        className="h-full p-3 transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8 aos-init aos-animate"
-                        data-aos-duration={1000}
-                        data-aos="fade-right"
+                        className="h-full p-3 box-shadowww bg-[#252527] rounded-[12px] transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8"
                       >
                         <div className="max-w-[380px]">
-                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-120 mb-1 sm:mb-3 line-clamp-2">
+                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-[40px] mb-1 sm:mb-3 line-clamp-2">
                             Branding
                           </h3>
-                          <p className="text-gray font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
+                          <p className="text-gray text-[#e0e0e099] font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
                             Developing a creative and unique logo for your
                             project and create its branding guidelines
                           </p>
@@ -2340,15 +2180,14 @@ function App() {
                       </a>
                       <a
                         href="/brief/game"
-                        className="h-full p-3 transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8 aos-init aos-animate"
+                        className="h-full p-3 box-shadowww bg-[#252527] rounded-[12px] transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8"
                         data-aos-duration={1100}
-                        data-aos="fade-right"
                       >
                         <div className="max-w-[380px]">
-                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-120 mb-1 sm:mb-3 line-clamp-2">
+                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-[40px] mb-1 sm:mb-3 line-clamp-2">
                             Production of games
                           </h3>
-                          <p className="text-gray font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
+                          <p className="text-gray text-[#e0e0e099] font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
                             Development of games of any subject and complexity,
                             corresponding to the international level.
                           </p>
@@ -2356,15 +2195,14 @@ function App() {
                       </a>
                       <a
                         href="/brief/ai"
-                        className="h-full p-3 transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8 aos-init aos-animate"
+                        className="h-full p-3 box-shadowww bg-[#252527] rounded-[12px] transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8"
                         data-aos-duration={1200}
-                        data-aos="fade-right"
                       >
                         <div className="max-w-[380px]">
-                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-120 mb-1 sm:mb-3 line-clamp-2">
+                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-[40px] mb-1 sm:mb-3 line-clamp-2">
                             Artificial intelligence
                           </h3>
-                          <p className="text-gray font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
+                          <p className="text-gray text-[#e0e0e099] font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
                             Development of intelligent computer systems with the
                             capabilities of human intelligence.
                           </p>
@@ -2372,15 +2210,14 @@ function App() {
                       </a>
                       <a
                         href="/brief/cybersecurity"
-                        className="h-full p-3 transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8 aos-init aos-animate"
+                        className="h-full p-3 box-shadowww bg-[#252527] rounded-[12px] transition duration-300 cursor-pointer services-card bg-vacancy-card-footer-bg rounded-8 xs:rounded-12 sm:py-4 sm:px-4 lg:py-8 lg:px-8"
                         data-aos-duration={1300}
-                        data-aos="fade-right"
                       >
                         <div className="max-w-[380px]">
-                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-120 mb-1 sm:mb-3 line-clamp-2">
+                          <h3 className="text-white text-base sm:text-[28px] lg:text-[38px] font-bold leading-[40px] mb-1 sm:mb-3 line-clamp-2">
                             Cybersecurity
                           </h3>
-                          <p className="text-gray font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
+                          <p className="text-gray text-[#e0e0e099] font-sans font-normal text-[14px] sm:text-sm lg:text-base leading-130 lg:leading-140 xs:leading-140 tracking-[0.2px] line-clamp-3">
                             Find and fix vulnerabilities in networks, devices,
                             code, and data.
                           </p>
@@ -2393,23 +2230,17 @@ function App() {
                     <div className="container hidden md:block">
                       <div className="mx-auto">
                         <div
-                          className="section-title_green mb-[13px] aos-init aos-animate"
-                          data-aos="fade-right"
-                          data-aos-duration={600}
+                          className=" text-[#00a795] text-[16px] font-[700] mb-[13px]"
                         >
-                          our partners
+                          OUR PARTNERS
                         </div>
                         <div
-                          className="section-title_white lg:leading-[43px] md:leading-[38px] sm:leading-[34px] leading-[34px] md:text-[36px] sm:text-[28px] text-[28px] mb-[36px] md:mb-[50px] lg:mb-[64px] aos-init aos-animate"
-                          data-aos="fade-right"
-                          data-aos-duration={800}
+                          className=" text-[36px] font-[700] text-white lg:leading-[43px] md:leading-[38px] sm:leading-[34px] leading-[34px] md:text-[36px] sm:text-[28px] mb-[36px] md:mb-[50px] lg:mb-[64px]"
                         >
                           Companies that believe in us
                         </div>
                         <div
-                          className="container m-auto partners-slider aos-init aos-animate"
-                          data-aos="fade-left"
-                          data-aos-duration={1000}
+                          className="container m-auto partners-slider"
                         >
                           <div className="grid gap-5 overflow-hidden lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-1">
                             <div className="cursor-pointer select-none">
@@ -2755,23 +2586,17 @@ function App() {
                     <div className="container block md:hidden">
                       <div className="xl:max-w-[990px] mx-auto">
                         <div
-                          className="section-title_green mb-[13px] aos-init aos-animate"
-                          data-aos="fade-right"
-                          data-aos-duration={600}
+                          className=" mb-[13px]"
                         >
                           our partners
                         </div>
                         <div
-                          className="section-title_white lg:leading-[43px] md:leading-[38px] sm:leading-[34px] leading-[34px] md:text-[36px] sm:text-[28px] text-[28px] mb-[36px] md:mb-[50px] lg:mb-[64px] aos-init aos-animate"
-                          data-aos="fade-right"
-                          data-aos-duration={800}
+                          className=" lg:leading-[43px] md:leading-[38px] sm:leading-[34px] leading-[34px] md:text-[36px] sm:text-[28px] text-[28px] mb-[36px] md:mb-[50px] lg:mb-[64px]"
                         >
                           Companies that believe in us
                         </div>
                         <div
-                          className="partners-slider aos-init aos-animate"
-                          data-aos="fade-left"
-                          data-aos-duration={1000}
+                          className="partners-slider"
                         >
                           <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-grid swiper-grid-column">
                             <div
@@ -3319,8 +3144,7 @@ function App() {
                   <div className="bg-[#1E1E20] pt-[95px] hidden md:block">
                     <div className="container">
                       <div
-                        className="grid bg-[#ffffff12] p-8 md:p-10 lg:pt-12 pb-16 lg:pb-16 md:gap-y-3 lg:gap-y-8 lg:px-14 md:grid-cols-12 rounded-xl items-start aos-init aos-animate"
-                        data-aos-duration={600}
+                        className="grid bg-[#ffffff12] p-8 md:p-10 lg:pt-12 pb-16 lg:pb-16 md:gap-y-3 lg:gap-y-8 lg:px-14 md:grid-cols-12 rounded-xl items-start"
                       >
                         <div className="xl:col-span-7 col-span-12">
                           <h2 className="font-bold text-center md:text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl md:!leading-[120%] text-white line-clamp-3 md:line-clamp-2 max-w-[631px] mb-4 md:mb-8">
@@ -3584,7 +3408,7 @@ function App() {
                     </div>
                   </div>
                   <div className="flex justify-center lg:!justify-start lg:!items-center mb-5 md:mb-10 lg:mb-[50px]">
-                    <div className="flex flex-col pt-[12px] ss:flex-row xs:items-center lg:items-center gap-x-8 sm:gap-y-0 gap-y-4">
+                    <div className="flex pt-[12px] ss:flex-row xs:items-center lg:items-center gap-x-8 sm:gap-y-0 gap-y-4">
                       <div className="grid grid-cols-5 md:grid-cols-9 gap-3 mb-2 xs:mb-1">
                         <a
                           href="https://www.facebook.com/uicgroup.org"
@@ -3686,7 +3510,7 @@ function App() {
                           />
                         </a>
                       </div>
-                      <div className="flex flex-col gap-y-2 xs:flex-row justify-center xs:gap-x-4 xs:pt-2 sm:!pt-0 lg:!pt-0 lg:!items-center">
+                      <div className="flex space-x-3 xs:flex-row justify-center xs:gap-x-4 xs:pt-2 sm:!pt-0 lg:!pt-0 lg:!items-center">
                         <div className="flex gap-x-1 sm:!gap-x-3 items-center xs:justify-center">
                           <i className="icon hover:text-red-500 text-white">
                             <svg
