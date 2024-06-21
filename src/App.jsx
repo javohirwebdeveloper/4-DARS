@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
-
+import { FaArrowRightLong } from "react-icons/fa6";
 function App() {
   const uicRef = useRef(null);
   const mountainRef = useRef(null);
-   const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,10 +50,7 @@ function App() {
                 }`}
               >
                 <div className="container py-[15px] flex items-center justify-between transition-all duration-300">
-                  <button
-                    className="text-white inline-flex lg:!hidden"
-                    aria-label="button"
-                  >
+                  <button className="text-white inline-flex lg:!hidden">
                     <i className="icon hover:text-red-500 py-1.5 px-1.5 bg-[#ffffff29] rounded-[10px]">
                       <svg
                         width={26}
@@ -497,10 +494,7 @@ function App() {
                     </div>
                   </nav>
                   <div className="translate-x-[-100%] scale-75 fixed top-0 left-0 right-0 bottom-0 duration-300 bg-[#1e1e20e0] backdrop-blur-2xl w-full h-[100vh] overflow-hidden">
-                    <button
-                      className="text-white absolute top-[26px] left-[10px]"
-                      aria-label="button"
-                    >
+                    <button className="text-white absolute top-[26px] left-[10px]">
                       <i className="icon hover:text-red-500">
                         <svg
                           className="group"
@@ -703,24 +697,23 @@ function App() {
                             data-aos-duration={1900}
                           >
                             <a href="/portfolio" className="">
-                              <button
-                                className="s-button rounded-12 lg:text-[16px] text-[13px] py-[10px] lg:!pl-6 sm:pl-4 pl-4 pr-3 md:!pr-3 md:text-[16px] sm:text-[13px] md:py-[11px] sm:py-[10px] lg:!pt-3 lg:!pb-3 flex items-center justify-center cursor-pointer transition duration-300 group"
-                                aria-label="button"
-                              >
-                                <div className="font-semibold flex items-center gap-4">
+                              <button className="s-button rounded-[12px] lg:text-[16px] text-[13px] py-[10px] lg:!pl-6 sm:pl-4 pl-4 pr-3 md:!pr-3 md:text-[16px] sm:text-[13px] md:py-[11px] sm:py-[10px] lg:!pt-3 lg:!pb-3 flex items-center justify-center cursor-pointer transition duration-300 bg-[#1A8377] text-white border-[#00A795] border-2 hover:bg-[#00A795] hover:border-[#00A795]">
+                                <div className="text-white flex items-center gap-4">
                                   <span className="sm:text-[16px] text-[13px]">
                                     Portfolio
                                   </span>
-                                  <span className="icon-arrow icon-arrow bg-[#4CC1B5] transition duration-300 !text-[13px] md:text-base ease-in-out rounded-full w-4 h-4 md:!w-6 md:!h-6 flex items-center justify-center group-hover:rotate-45" />
+                                  <span className="icon-arrow icon-arrow bg-[#4CC1B5] transition duration-300 !text-[13px] md:text-base ease-in-out rounded-full w-4 h-4 md:!w-6 md:!h-6 flex items-center justify-center group-hover:rotate-45">
+                                    <FaArrowRightLong />
+                                  </span>
                                 </div>
                               </button>
                             </a>
                             <a
-                              className="!pl-[25px] !border-white flex py-[3px] md:py-0 w-fit px-[14px] sm:px-4 items-center borders justify-center border border-solid rounded-12 transition duration-500 ease-in-out backdrop-blur-xl cursor-pointer hover:!bg-green hover:!border-green"
+                              className="!pl-[25px] !border-white text-white hover:bg-[#02A795]  flex py-[3px] md:py-0 w-fit px-[14px] sm:px-4 items-center border justify-center border-solid rounded-12 transition duration-500 ease-in-out cursor-pointer rounded-[12px] hover:border-transparent"
                               download=""
                               href="tel:+998 71 200 70 07"
                             >
-                              <p className="group-hover:bg-white linear-wipe lg:!leading-130 transition duration-500 ease-in-out leading-[16px] link text-base font-bold py-[10px] sm:py-[10px] lg:!pt-3 lg:!pb-3 flex justify-center items-center lg:!text-base text-[13px] md:!text-base gap-x-[23px] lg:!gap-x-[21px]">
+                              <p className="group-hover:bg-white text-white linear-wipe lg:!leading-130 transition duration-500 ease-in-out leading-[16px] link text-base font-bold py-[10px] sm:py-[10px] lg:!pt-3 lg:!pb-3 flex justify-center items-center lg:!text-base text-[13px] md:!text-base gap-x-[23px] lg:!gap-x-[21px] rounded-[12px]">
                                 Call
                                 <i className="icon hover:text-red-500 text-white w-[16px] h-[16px] md:!w-[24px] md:!h-[24px] flex items-center">
                                   <svg
@@ -1076,14 +1069,10 @@ function App() {
                       </div>
                       <div className="mt-[-81px]">
                         <div
-                          data-v-06100610=""
                           className="transition duration-700 ease-in-out AboutCard aos-init aos-animate"
                           data-aos="fade-up"
                         >
-                          <div
-                            data-v-06100610=""
-                            className="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper !w-[283px] h-[450px] rounded-12 transition duration-700 ease-in-out z-10"
-                          >
+                          <div className="swiper !w-[283px] h-[450px] rounded-12 transition duration-700 ease-in-out z-10">
                             <div
                               className="swiper-wrapper"
                               style={{
@@ -1091,25 +1080,15 @@ function App() {
                                 transitionDuration: "0ms",
                               }}
                             >
-                              <div
-                                data-v-06100610=""
-                                className="swiper-slide swiper-slide-prev relative cursor-pointer group rounded-12"
-                              >
+                              <div className="swiper-slide swiper-slide-prev relative cursor-pointer group rounded-12">
                                 <img
-                                  data-v-06100610=""
                                   alt="AboutSliderCard"
                                   className="object-cover object-center w-full h-full group- rounded-12"
                                   lazy="loaded"
                                   src="https://uic.group/media/cache/21/e5/21e58126b6c478060b6e6fd54ca6fbba.jpg"
                                 />
-                                <div
-                                  data-v-06100610=""
-                                  className="transition duration-300 opacity-0 group-hover:opacity-100 gradient-background rounded-[12px]"
-                                >
-                                  <i
-                                    data-v-06100610=""
-                                    className="icon hover:text-red-500 text-white absolute top-[50%] left-[45%]"
-                                  >
+                                <div className="transition duration-300 opacity-0 group-hover:opacity-100 gradient-background rounded-[12px]">
+                                  <i className="icon hover:text-red-500 text-white absolute top-[50%] left-[45%]">
                                     <svg
                                       width={32}
                                       height={32}
@@ -1135,25 +1114,15 @@ function App() {
                                   </i>
                                 </div>
                               </div>
-                              <div
-                                data-v-06100610=""
-                                className="swiper-slide swiper-slide-active relative cursor-pointer group rounded-12"
-                              >
+                              <div className="swiper-slide swiper-slide-active relative cursor-pointer group rounded-12">
                                 <img
-                                  data-v-06100610=""
                                   alt="AboutSliderCard"
                                   className="object-cover object-center w-full h-full group- rounded-12"
                                   lazy="loaded"
                                   src="https://uic.group/media/cache/5a/70/5a70d134e3000c5ef605393b360f73fe.jpg"
                                 />
-                                <div
-                                  data-v-06100610=""
-                                  className="transition duration-300 opacity-0 group-hover:opacity-100 gradient-background rounded-[12px]"
-                                >
-                                  <i
-                                    data-v-06100610=""
-                                    className="icon hover:text-red-500 text-white absolute top-[50%] left-[45%]"
-                                  >
+                                <div className="transition duration-300 opacity-0 group-hover:opacity-100 gradient-background rounded-[12px]">
+                                  <i className="icon hover:text-red-500 text-white absolute top-[50%] left-[45%]">
                                     <svg
                                       width={32}
                                       height={32}
@@ -1195,14 +1164,10 @@ function App() {
                       </div>
                       <div className="about-card2-wrapper">
                         <div
-                          data-v-06100610=""
                           className="transition duration-700 ease-in-out AboutCard aos-init aos-animate"
                           data-aos="fade-up"
                         >
-                          <div
-                            data-v-06100610=""
-                            className="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper !w-[283px] h-[450px] rounded-12 transition duration-700 ease-in-out z-10"
-                          >
+                          <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper !w-[283px] h-[450px] rounded-12 transition duration-700 ease-in-out z-10">
                             <div
                               className="swiper-wrapper"
                               style={{
@@ -1210,25 +1175,15 @@ function App() {
                                 transitionDuration: "0ms",
                               }}
                             >
-                              <div
-                                data-v-06100610=""
-                                className="swiper-slide swiper-slide-prev relative cursor-pointer group rounded-12"
-                              >
+                              <div className="swiper-slide swiper-slide-prev relative cursor-pointer group rounded-12">
                                 <img
-                                  data-v-06100610=""
                                   alt="AboutSliderCard"
                                   className="object-cover object-center w-full h-full group- rounded-12"
                                   lazy="loaded"
                                   src="https://uic.group/media/cache/63/2a/632ae021916378d650ff3ffb98fcb7c1.jpg"
                                 />
-                                <div
-                                  data-v-06100610=""
-                                  className="transition duration-300 opacity-0 group-hover:opacity-100 gradient-background rounded-[12px]"
-                                >
-                                  <i
-                                    data-v-06100610=""
-                                    className="icon hover:text-red-500 text-white absolute top-[50%] left-[45%]"
-                                  >
+                                <div className="transition duration-300 opacity-0 group-hover:opacity-100 gradient-background rounded-[12px]">
+                                  <i className="icon hover:text-red-500 text-white absolute top-[50%] left-[45%]">
                                     <svg
                                       width={32}
                                       height={32}
@@ -1254,25 +1209,15 @@ function App() {
                                   </i>
                                 </div>
                               </div>
-                              <div
-                                data-v-06100610=""
-                                className="swiper-slide swiper-slide-active relative cursor-pointer group rounded-12"
-                              >
+                              <div className="swiper-slide swiper-slide-active relative cursor-pointer group rounded-12">
                                 <img
-                                  data-v-06100610=""
                                   alt="AboutSliderCard"
                                   className="object-cover object-center w-full h-full group- rounded-12"
                                   lazy="loaded"
                                   src="https://uic.group/media/cache/1c/ac/1cac8a7441794ad91f2cc94093c84fd0.jpg"
                                 />
-                                <div
-                                  data-v-06100610=""
-                                  className="transition duration-300 opacity-0 group-hover:opacity-100 gradient-background rounded-[12px]"
-                                >
-                                  <i
-                                    data-v-06100610=""
-                                    className="icon hover:text-red-500 text-white absolute top-[50%] left-[45%]"
-                                  >
+                                <div className="transition duration-300 opacity-0 group-hover:opacity-100 gradient-background rounded-[12px]">
+                                  <i className="icon hover:text-red-500 text-white absolute top-[50%] left-[45%]">
                                     <svg
                                       width={32}
                                       height={32}
@@ -1398,10 +1343,7 @@ function App() {
                         data-aos-duration={1900}
                       >
                         <a href="/portfolio" className="">
-                          <button
-                            className="s-button rounded-12 lg:text-[16px] text-[13px] py-[10px] lg:!pl-6 sm:pl-4 pl-4 pr-3 md:!pr-3 md:text-[16px] sm:text-[13px] md:py-[11px] sm:py-[10px] lg:!pt-3 lg:!pb-3 flex items-center justify-center cursor-pointer transition duration-300 group !whitespace-nowrap"
-                            aria-label="button"
-                          >
+                          <button className="s-button rounded-12 lg:text-[16px] text-[13px] py-[10px] lg:!pl-6 sm:pl-4 pl-4 pr-3 md:!pr-3 md:text-[16px] sm:text-[13px] md:py-[11px] sm:py-[10px] lg:!pt-3 lg:!pb-3 flex items-center justify-center cursor-pointer transition duration-300 group !whitespace-nowrap">
                             <div className="flex items-center gap-4">
                               <span className="sm:text-[16px] text-[13px]">
                                 Portfolio
