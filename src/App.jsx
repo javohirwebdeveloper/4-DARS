@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { FaArrowRightLong } from "react-icons/fa6";
 function App() {
   const uicRef = useRef(null);
@@ -890,9 +893,9 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="container sectionInfo pb-[60px] md:!px-[124px] md:!pb-[91px] gap-x-[121px] flex justify-center sm:flex-col xl:flex-row lg:flex-col lg:pt-[180px] md:pt-[110px] sm:pt-[60px] pt-[60px]">
+                  <div className="container mt-[100px] sectionInfo pb-[60px] md:!px-[124px] md:!pb-[91px] gap-x-[121px] flex justify-center sm:flex-col xl:flex-row lg:flex-col lg:pt-[380px] md:pt-[110px] sm:pt-[60px] pt-[160px]">
                     <div className="hidden md:!flex justify-center gap-x-6 lg:pb-12 md:pb-12 relative">
-                      <div className="absolute right-[-60px] top-[-60px] z-10 translate-y-[-50%] translate-x-[50%] rotate-anim">
+                      <div className="absolute right-[-10px] top-[-10px] z-20 translate-y-[-50%] translate-x-[50%] rotate-anim">
                         <span>
                           <i
                             className="icon1 hover:text-red-500 text-[#fff] aos-init aos-animate"
@@ -1068,19 +1071,14 @@ function App() {
                         <span></span>
                       </div>
                       <div className="mt-[-81px]">
-                        <div
-                          className="transition duration-700 ease-in-out AboutCard aos-init aos-animate"
-                          data-aos="fade-up"
-                        >
+                        <div className="transition duration-700 ease-in-out AboutCard aos-init aos-animate">
                           <div className="swiper !w-[283px] h-[450px] rounded-12 transition duration-700 ease-in-out z-10">
-                            <div
-                              className="swiper-wrapper"
-                              style={{
-                                transform: "translate3d(-283px, 0px, 0px)",
-                                transitionDuration: "0ms",
-                              }}
+                            <Swiper
+                              autoplay={{ delay: 2500 }}
+                              modules={[Autoplay]}
+                              className="rounded-[12px] overflow-hidden h-[450px] w-[283px]"
                             >
-                              <div className="swiper-slide swiper-slide-prev relative cursor-pointer group rounded-12">
+                              <SwiperSlide className="swiper-slide swiper-slide-prev relative cursor-pointer group ">
                                 <img
                                   alt="AboutSliderCard"
                                   className="object-cover object-center w-full h-full group- rounded-12"
@@ -1113,11 +1111,11 @@ function App() {
                                     </svg>
                                   </i>
                                 </div>
-                              </div>
-                              <div className="swiper-slide swiper-slide-active relative cursor-pointer group rounded-12">
+                              </SwiperSlide>
+                              <SwiperSlide className="swiper-slide swiper-slide-active relative cursor-pointer group rounded-12">
                                 <img
                                   alt="AboutSliderCard"
-                                  className="object-cover object-center w-full h-full group- rounded-12"
+                                  className="object-cover object-center w-full h-full rounded-12"
                                   lazy="loaded"
                                   src="https://uic.group/media/cache/5a/70/5a70d134e3000c5ef605393b360f73fe.jpg"
                                 />
@@ -1147,8 +1145,8 @@ function App() {
                                     </svg>
                                   </i>
                                 </div>
-                              </div>
-                            </div>
+                              </SwiperSlide>
+                            </Swiper>
                           </div>
                         </div>
 
@@ -1163,19 +1161,14 @@ function App() {
                         </span>
                       </div>
                       <div className="about-card2-wrapper">
-                        <div
-                          className="transition duration-700 ease-in-out AboutCard aos-init aos-animate"
-                          data-aos="fade-up"
-                        >
+                        <div className="transition duration-700 ease-in-out AboutCard aos-init aos-animate">
                           <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper !w-[283px] h-[450px] rounded-12 transition duration-700 ease-in-out z-10">
-                            <div
-                              className="swiper-wrapper"
-                              style={{
-                                transform: "translate3d(-283px, 0px, 0px)",
-                                transitionDuration: "0ms",
-                              }}
+                            <Swiper
+                              autoplay={{ delay: 2500 }}
+                              modules={[Autoplay]}
+                              className="rounded-[12px] overflow-hidden h-[450px] w-[283px]"
                             >
-                              <div className="swiper-slide swiper-slide-prev relative cursor-pointer group rounded-12">
+                              <SwiperSlide className="swiper-slide swiper-slide-prev relative cursor-pointer group rounded-12">
                                 <img
                                   alt="AboutSliderCard"
                                   className="object-cover object-center w-full h-full group- rounded-12"
@@ -1208,8 +1201,8 @@ function App() {
                                     </svg>
                                   </i>
                                 </div>
-                              </div>
-                              <div className="swiper-slide swiper-slide-active relative cursor-pointer group rounded-12">
+                              </SwiperSlide>
+                              <SwiperSlide className="swiper-slide swiper-slide-active relative cursor-pointer group rounded-12">
                                 <img
                                   alt="AboutSliderCard"
                                   className="object-cover object-center w-full h-full group- rounded-12"
@@ -1242,8 +1235,8 @@ function App() {
                                     </svg>
                                   </i>
                                 </div>
-                              </div>
-                            </div>
+                              </SwiperSlide>
+                            </Swiper>
                           </div>
                         </div>
                       </div>
@@ -3326,7 +3319,6 @@ function App() {
                     <div className="container">
                       <div
                         className="grid bg-[#ffffff12] p-8 md:p-10 lg:pt-12 pb-16 lg:pb-16 md:gap-y-3 lg:gap-y-8 lg:px-14 md:grid-cols-12 rounded-xl items-start aos-init aos-animate"
-                        data-aos="fade-up"
                         data-aos-duration={600}
                       >
                         <div className="xl:col-span-7 col-span-12">
