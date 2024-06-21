@@ -11,8 +11,8 @@ function App() {
       const scrollY = window.scrollY;
 
       if (scrollY > 0) {
-        uicRef.current.style.transform = `translate(0px, 0px)`;
-        mountainRef.current.style.transform = `translate(0px, 0px)`;
+        uicRef.current.style.transform = `translate(0px, 200px)`;
+        mountainRef.current.style.transform = `translate(0px, -230px)`;
       } else {
         uicRef.current.style.transform = "translate(0px, 0px)";
         mountainRef.current.style.transform = "translate(0px, 0px)";
@@ -26,16 +26,16 @@ function App() {
     };
   }, []);
 
-   useEffect(() => {
-     const handleScroll = () => {
-       const scrollPosition = window.pageYOffset;
-       const headerHeight = document.querySelector("header").offsetHeight;
-       setIsScrolled(scrollPosition > headerHeight);
-     };
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.pageYOffset;
+      const headerHeight = document.querySelector("header").offsetHeight;
+      setIsScrolled(scrollPosition > headerHeight);
+    };
 
-     window.addEventListener("scroll", handleScroll);
-     return () => window.removeEventListener("scroll", handleScroll);
-   }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <>
       <div id="app" className="bg-[#1E1E20] ">
@@ -43,7 +43,7 @@ function App() {
           <div>
             <div>
               <header
-                className={`header duration-300 transition-all w-screen right-0 z-20 top-0 fixed ${
+                className={`header duration-300 transition-all w-screen right-0 z-50 top-0 fixed ${
                   isScrolled
                     ? "bg-[#1E1E20] bg-opacity-80 !fixed border-[#2F2F30] backdrop-blur-[12px]"
                     : " p-5"
@@ -55,35 +55,35 @@ function App() {
                     aria-label="button"
                   >
                     <i className="icon hover:text-red-500 py-1.5 px-1.5 bg-[#ffffff29] rounded-[10px]">
-                        <svg
-                          width={26}
-                          height={26}
-                          viewBox="0 0 26 26"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M3.35645 13H22.6422"
-                            stroke="white"
-                            strokeWidth="2.05714"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M3.35645 6.57147H14.285"
-                            stroke="white"
-                            strokeWidth="2.05714"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M3.35645 19.4285H19.4279"
-                            stroke="white"
-                            strokeWidth="2.05714"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                      <svg
+                        width={26}
+                        height={26}
+                        viewBox="0 0 26 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.35645 13H22.6422"
+                          stroke="white"
+                          strokeWidth="2.05714"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M3.35645 6.57147H14.285"
+                          stroke="white"
+                          strokeWidth="2.05714"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M3.35645 19.4285H19.4279"
+                          stroke="white"
+                          strokeWidth="2.05714"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
                     </i>
                   </button>
                   <a
@@ -678,44 +678,9 @@ function App() {
               </header>
               <div className="min-h-[100vh]">
                 <section className="overflow-hidden">
-                  <div
-                    className="pin-spacer  hero"
-                    style={{
-                      order: 0,
-                      placeSelf: "auto",
-                      gridArea: "auto",
-                      zIndex: "auto",
-                      float: "none",
-                      flexShrink: 1,
-                      display: "block",
-                      margin: 0,
-                      inset: 0,
-                      position: "relative",
-                      flexBasis: "auto",
-                      overflow: "visible",
-                      boxSizing: "border-box",
-                      width: 1503,
-                      height: 1393,
-                      padding: "0px 0px 0.001px",
-                    }}
-                  >
-                    <div
-                      className="main-block"
-                      id="main-block"
-                      style={{
-                        translate: "none",
-                        rotate: "none",
-                        scale: "none",
-                        inset: "0px auto auto 0px",
-                        margin: 0,
-                        maxWidth: "1503.2px",
-                        width: "1503.2px",
-                        maxHeight: "1392.55px",
-                        height: "1392.55px",
-                        padding: 0,
-                        transform: "translate(0px, 0.001px)",
-                      }}
-                    >
+                  <div>
+                    <div className="main-bg h-[760px]">
+                      <div className="main-bgg h-[770px] w-full z-30 absolute"></div>
                       <div className=" container sticky z-40 lg:pt-[316px] md:pt-[250px] sm:pt-[172px] pt-[172px]">
                         <div className=" md:max-w-[506px] w-full">
                           <h2
@@ -863,7 +828,7 @@ function App() {
                       </div>
                       <div className="main-block__background">
                         <span
-                          className="uic absolute z-10 right-32 top-36"
+                          className="uic duration-[1500ms] absolute z-10 right-32 top-36"
                           id="uic"
                           ref={uicRef}
                         >
@@ -914,23 +879,20 @@ function App() {
                             />
                           </div>
                         </span>
-                        <span
-                          className="mountain absolute z-20 top-48 left-0 w-[100%] bottom-0"
-                          id="mountain"
-                          ref={mountainRef}
-                        >
-                          <img
-                            src="https://uic.group/uic-images/mountain.webp"
-                            alt=""
-                            width={1920}
-                            height={935}
-                          />
-                        </span>
-                        <img
-                          className=" absolute w-full right-0 top-0"
-                          src="https://uic.group/uic-images/main_back.webp"
-                          alt=""
-                        />
+                        <div className="">
+                          <span
+                            className="mountain duration-[1500ms] absolute z-20 top-64 left-0 w-[100%] bottom-0"
+                            id="mountain"
+                            ref={mountainRef}
+                          >
+                            <img
+                              src="https://uic.group/uic-images/mountain.webp"
+                              alt=""
+                              width={1920}
+                              height={935}
+                            />
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>

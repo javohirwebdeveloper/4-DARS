@@ -40,10 +40,13 @@
   max-width: 1130px;
   margin: 0 auto;
 }
-.mountain {
-  animation: moveUp 5s infinite alternate;
+.main-bg {
+  background-image: url(https://uic.group/uic-images/main_back.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-
-.uic {
-  animation: moveDown 5s infinite alternate;
+.main-bgg {
+background: rgb(30,30,32);
+background: linear-gradient(360deg, rgba(30,30,32,0.8072478991596639) 0%, rgba(255,255,255,0) 41%);
 }
