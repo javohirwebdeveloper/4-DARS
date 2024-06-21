@@ -1150,7 +1150,7 @@ function App() {
                           </div>
                         </div>
 
-                        <div className="pt-8 line" />
+                        <div className="mt-8 w-full h-[2px] bg-[#4B4B4D]" />
                         <span className="flex items-center gap-[11px] pt-5 leading-[19px] uppercase font-bold">
                           <h3 className="font-bold text-white leading-[58px] text-5xl">
                             10
@@ -1245,9 +1245,10 @@ function App() {
                       <p
                         data-aos="fade-left"
                         data-aos-duration={1500}
-                        className="text xs:text-[13px] md:!text-base text-[#00A795] uppercase font-bold leading-[19px] pb-2 md:pb-5 about-us aos-init aos-animate"
+                        className="text xs:text-[13px] items-center space-x-2 flex md:!text-base text-[#00A795] uppercase font-bold leading-[19px] pb-2 md:pb-5 about-us aos-init aos-animate"
                       >
-                        In the world
+                        <div className="h-[1.2px] w-[30px] bg-[#4B4B4D]"></div>
+                        <span>In the world</span>
                       </p>
                       <h2
                         data-aos="fade-left"
@@ -1336,21 +1337,23 @@ function App() {
                         data-aos-duration={1900}
                       >
                         <a href="/portfolio" className="">
-                          <button className="s-button rounded-12 lg:text-[16px] text-[13px] py-[10px] lg:!pl-6 sm:pl-4 pl-4 pr-3 md:!pr-3 md:text-[16px] sm:text-[13px] md:py-[11px] sm:py-[10px] lg:!pt-3 lg:!pb-3 flex items-center justify-center cursor-pointer transition duration-300 group !whitespace-nowrap">
-                            <div className="flex items-center gap-4">
+                          <button className="s-button rounded-[12px] lg:text-[16px] text-[13px] py-[10px] lg:!pl-6 sm:pl-4 pl-4 pr-3 md:!pr-3 md:text-[16px] sm:text-[13px] md:py-[11px] sm:py-[10px] lg:!pt-3 lg:!pb-3 flex items-center justify-center cursor-pointer transition duration-300 bg-[#1A8377] text-white border-[#00A795] border-2 hover:bg-[#00A795] hover:border-[#00A795]">
+                            <div className="text-white flex items-center gap-4">
                               <span className="sm:text-[16px] text-[13px]">
                                 Portfolio
                               </span>
-                              <span className="icon-arrow icon-arrow bg-[#4CC1B5] transition duration-300 !text-[13px] md:text-base ease-in-out rounded-full w-4 h-4 md:!w-6 md:!h-6 flex items-center justify-center group-hover:rotate-45" />
+                              <span className="icon-arrow icon-arrow bg-[#4CC1B5] transition duration-300 !text-[13px] md:text-base ease-in-out rounded-full w-4 h-4 md:!w-6 md:!h-6 flex items-center justify-center group-hover:rotate-45">
+                                <FaArrowRightLong />
+                              </span>
                             </div>
                           </button>
                         </a>
                         <a
-                          className="border-white flex py-[3px] md:py-0 w-fit px-[14px] sm:px-4 items-center borders justify-center border border-solid rounded-12 transition duration-500 ease-in-out backdrop-blur-xl cursor-pointer"
+                          className="!pl-[25px] !border-white text-white hover:bg-[#02A795]  flex py-[3px] md:py-0 w-fit px-[14px] sm:px-4 items-center border justify-center border-solid rounded-12 transition duration-500 ease-in-out cursor-pointer rounded-[12px] hover:border-transparent"
                           download=""
                           href="tel:+998 71 200 70 07"
                         >
-                          <p className="group-hover:bg-white linear-wipe lg:!leading-130 transition duration-500 ease-in-out leading-[16px] link text-base font-bold py-[10px] sm:py-[10px] lg:!pt-3 lg:!pb-3 flex justify-center items-center lg:!text-base text-[13px] md:!text-base gap-x-[23px] lg:!gap-x-[21px]">
+                          <p className="group-hover:bg-white text-white linear-wipe lg:!leading-130 transition duration-500 ease-in-out leading-[16px] link text-base font-bold py-[10px] sm:py-[10px] lg:!pt-3 lg:!pb-3 flex justify-center items-center lg:!text-base text-[13px] md:!text-base gap-x-[23px] lg:!gap-x-[21px] rounded-[12px]">
                             Call
                             <i className="icon hover:text-red-500 text-white w-[16px] h-[16px] md:!w-[24px] md:!h-[24px] flex items-center">
                               <svg
@@ -1416,29 +1419,27 @@ function App() {
                           </p>
                         </div>
                         <div className="scroll-mini flex overflow-y-auto gap-3 md:gap-4 max-md:w-full">
-                          <a>
-                            href="/portfolio/?category=2" className="font-roboto
-                            py-2 px-4 md:py-3 md:px-5 text-white/60
-                            whitespace-nowrap border-solid border
-                            border-white/20 sm:rounded-[12px] rounded-[8px]
-                            hover:text-green hover:border-green duration-300
-                            cursor-pointer"
+                          <a
+                            href="/portfolio/?category=2"
+                            className="font-roboto hover:border-[#00A795] hover:text-[#00A795] py-2 px-4 md:py-3 md:px-5 text-white/60 whitespace-nowrap border-solid border border-white/20 sm:rounded-[12px] rounded-[8px] hover:text-green hover:border-green duration-300 cursor-pointer"
+                          >
+                            Branding
                           </a>
                           <a
                             href="/portfolio/?category=4"
-                            className="font-roboto py-2 px-4 md:py-3 md:px-5 text-white/60 whitespace-nowrap border-solid border border-white/20 sm:rounded-[12px] rounded-[8px] hover:text-green hover:border-green duration-300 cursor-pointer"
+                            className="font-roboto hover:border-[#00A795] hover:text-[#00A795] py-2 px-4 md:py-3 md:px-5 text-white/60 whitespace-nowrap border-solid border border-white/20 sm:rounded-[12px] rounded-[8px] hover:text-green hover:border-green duration-300 cursor-pointer"
                           >
                             Mobile app
                           </a>
                           <a
                             href="/portfolio/?category=3"
-                            className="font-roboto py-2 px-4 md:py-3 md:px-5 text-white/60 whitespace-nowrap border-solid border border-white/20 sm:rounded-[12px] rounded-[8px] hover:text-green hover:border-green duration-300 cursor-pointer"
+                            className="font-roboto hover:border-[#00A795] hover:text-[#00A795] py-2 px-4 md:py-3 md:px-5 text-white/60 whitespace-nowrap border-solid border border-white/20 sm:rounded-[12px] rounded-[8px] hover:text-green hover:border-green duration-300 cursor-pointer"
                           >
                             CRM
                           </a>
                           <a
                             href="/portfolio/?category=5"
-                            className="font-roboto py-2 px-4 md:py-3 md:px-5 text-white/60 whitespace-nowrap border-solid border border-white/20 sm:rounded-[12px] rounded-[8px] hover:text-green hover:border-green duration-300 cursor-pointer"
+                            className="font-roboto hover:border-[#00A795] hover:text-[#00A795] py-2 px-4 md:py-3 md:px-5 text-white/60 whitespace-nowrap border-solid border border-white/20 sm:rounded-[12px] rounded-[8px] hover:text-green hover:border-green duration-300 cursor-pointer"
                           >
                             Website
                           </a>
