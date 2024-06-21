@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.icon1 {
+  display: inline-block;
+  animation: rotate 6s linear infinite;
+}
+.container {
+  max-width: 1130px;
+  margin: 0 auto;
+}
+.mountain {
+  animation: moveUp 5s infinite alternate;
+}
+
+.uic {
+  animation: moveDown 5s infinite alternate;
+}
